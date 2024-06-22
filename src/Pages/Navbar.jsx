@@ -1,23 +1,32 @@
 import Wrapper from "../assets/Wrappers/Navbar";
 import ThemeToggle from "./ThemeToggle";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <Wrapper>
       <div className="nav-center">
         <div>
-          <button type="button" className="toggle-btn">
-            Home
-          </button>
-          <button type="button" className="toggle-btn">
-            About
-          </button>
-          <button type="button" className="toggle-btn">
-            Services
-          </button>
-          <button type="button" className="toggle-btn">
-            Contact
-          </button>
+          <Link to="/">
+            <button type="button" className="toggle-btn">
+              Home
+            </button>
+          </Link>
+          <Link to="/about">
+            <button type="button" className="toggle-btn">
+              About
+            </button>
+          </Link>
+          <Link to="/services">
+            <button type="button" className="toggle-btn">
+              Services
+            </button>
+          </Link>
+          <Link to="/contact">
+            <button type="button" className="toggle-btn">
+              Contact
+            </button>
+          </Link>
         </div>
       </div>
       <div className="btn-container">

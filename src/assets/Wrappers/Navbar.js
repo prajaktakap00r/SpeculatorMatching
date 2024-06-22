@@ -5,8 +5,9 @@ const Wrapper = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
-  background: var(--background-secondary-color);
+  box-shadow: 0 1px 0 0 rgba(75, 201, 213, 0.8);
+  //background: linear-gradient(45deg, #3aafb9, #0e5c63);
+
   .nav-center {
     display: flex;
     width: 90vw;

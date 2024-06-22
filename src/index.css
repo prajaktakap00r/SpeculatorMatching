@@ -111,22 +111,27 @@ h5 {
 }
 
 h1 {
+  color: var(--primary-500) ;
   font-size: clamp(2rem, 5vw, 5rem); /* Large heading */
 }
 
 h2 {
+  color: var(--primary-500) ;
   font-size: clamp(1.5rem, 3vw, 3rem); /* Medium heading */
 }
 
 h3 {
+  color: var(--primary-500) ;
   font-size: clamp(1.25rem, 2.5vw, 2.5rem); /* Small heading */
 }
 
 h4 {
+  color: var(--primary-500) ;
   font-size: clamp(1rem, 2vw, 2rem); /* Extra small heading */
 }
 
 h5 {
+ 
   font-size: clamp(0.875rem, 1.5vw, 1.5rem); /* Tiny heading */
 }
 
@@ -176,6 +181,52 @@ ul {
   object-fit: cover;
 }
 /* buttons */
+.profileImg{
+  width: 40%;
+  display: block;
+  object-fit: cover;
+}
+.service {
+  width: 26rem;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin: 2rem;
+  background: linear-gradient(125deg, #f3f6f6, #f3f6f6);
+  color: #221c18;
+  box-shadow: 0 2px 8px rgba(35, 34, 34, 0.6);
+  border-radius: 6px;
+
+}
+.service:hover{
+  transform: scale(1.05); 
+  box-shadow: 0 4px 16px rgba(75, 201, 213, 0.8); 
+}
+
+.service .active {
+  animation: flash 1s infinite;
+}
+.about  {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  padding: 2rem;
+  margin: 2rem;
+  background: linear-gradient(125deg, #f3f6f6, #f3f6f6);
+  color: #221c18;
+  box-shadow: 0 2px 8px rgba(35, 34, 34, 0.6);
+  border-radius: 6px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+  cursor: pointer; 
+
+}
+.about:hover{
+  transform: scale(1.05); 
+  box-shadow: 0 4px 16px rgba(75, 201, 213, 0.8);
+}
 
 .btn {
   cursor: pointer;

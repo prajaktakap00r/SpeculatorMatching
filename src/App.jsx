@@ -4,6 +4,7 @@ import HomePage from "./Pages/HomePage.jsx";
 import { Login, Register } from "./Pages";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Landing } from "./Pages";
+import About from "./Pages/About";
 
 const router = createBrowserRouter([
   {
@@ -26,11 +27,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/about",
-    element: (
-      <div>
-        <h2>about page</h2>
-      </div>
-    ),
+    element: <About />,
   },
 ]);
 
