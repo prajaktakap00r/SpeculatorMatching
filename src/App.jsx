@@ -1,10 +1,9 @@
 import { useState } from "react";
 import "./App.css";
-import HomePage from "./Pages/HomePage.jsx";
-import { Login, Register } from "./Pages";
+import HomePage from "./pages/HomePage.jsx";
+import { DashboardLayout, Login, Register } from "./pages";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Landing } from "./Pages";
-import About from "./Pages/About";
+import { Landing } from "./pages";
 
 const router = createBrowserRouter([
   {
@@ -25,9 +24,15 @@ const router = createBrowserRouter([
       },
     ],
   },
+
   {
-    path: "/about",
-    element: <About />,
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: "profile",
+      },
+    ],
   },
 ]);
 
