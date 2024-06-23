@@ -4,7 +4,11 @@ import HomePage from "./pages/HomePage.jsx";
 import { DashboardLayout, Login, Register } from "./pages";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Landing } from "./pages";
-
+export const checkDefaultTheme = () => {
+  const isDarkTheme = localStorage.getItem("darkTheme") === "true";
+  document.body.classList.toggle("dark-theme", isDarkTheme);
+  return isDarkTheme;
+};
 const router = createBrowserRouter([
   {
     path: "/",

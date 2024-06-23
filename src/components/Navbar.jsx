@@ -1,7 +1,7 @@
 import Wrapper from "../assets/Wrappers/Navbar";
-import ThemeToggle from "./ThemeToggle";
+import ThemeToggle from "../components/ThemeToggle";
 import { Link } from "react-router-dom";
-
+import Logout from "./Logout";
 export default function Navbar() {
   return (
     <Wrapper>
@@ -31,6 +31,9 @@ export default function Navbar() {
       </div>
       <div className="btn-container">
         <ThemeToggle />
+      </div>
+      <div>
+        <Logout />
       </div>
     </Wrapper>
   );

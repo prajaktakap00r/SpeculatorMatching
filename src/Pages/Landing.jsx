@@ -1,12 +1,13 @@
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 import Wrapper from "../assets/Wrappers/Landing";
 import img1 from "../assets/images/PP-Boy.svg";
-import Home from "./Home";
-import About from "./About";
-import Services from "./Services";
+import Home from "../components/Home";
+import About from "../components/About";
+import Services from "../components/Services";
 export default function Landing() {
   return (
     <Wrapper>
+      <Home />
       <nav>
         <Navbar />
       </nav>
