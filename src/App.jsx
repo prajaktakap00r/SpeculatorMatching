@@ -1,6 +1,13 @@
 import "./App.css";
-import HomePage from "./pages/HomePage.jsx";
-import { DashboardLayout, Login, Register, Error, Landing } from "./pages";
+
+import {
+  HomePage,
+  DashboardLayout,
+  Login,
+  Register,
+  Error,
+  Landing,
+} from "./pages";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 export const checkDefaultTheme = () => {

@@ -7,7 +7,6 @@ import Services from "../components/Services";
 export default function Landing() {
   return (
     <Wrapper>
-      <Home />
       <nav>
         <Navbar />
       </nav>

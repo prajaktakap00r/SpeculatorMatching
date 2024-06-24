@@ -1,40 +1,37 @@
-import Wrapper from "../assets/Wrappers/Navbar";
-import ThemeToggle from "../components/ThemeToggle";
-import { Link } from "react-router-dom";
-import Logout from "./Logout";
-export default function Navbar() {
+import React, { useEffect, useState } from "react";
+import "./Navbar.css"; // Import the CSS for styling
+
+const Navbar = () => {
+  const [sticky, setSticky] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setSticky(true);
+    } else {
+      setSticky(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <Wrapper>
-      <div className="nav-center">
-        <div>
-          <Link to="/">
-            <button type="button" className="toggle-btn">
-              Home
-            </button>
-          </Link>
-          <Link to="/about">
-            <button type="button" className="toggle-btn">
-              About
-            </button>
-          </Link>
-          <Link to="/services">
-            <button type="button" className="toggle-btn">
-              Services
-            </button>
-          </Link>
-          <Link to="/contact">
-            <button type="button" className="toggle-btn">
-              Contact
-            </button>
-          </Link>
-        </div>
-      </div>
-      <div className="btn-container">
-        <ThemeToggle />
-      </div>
-      <div>
-        <Logout />
-      </div>
-    </Wrapper>
+    <nav className={`navbar ${sticky ? "sticky" : ""}`}>
+      <ul className="nav-links">
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        {/* Add more links as needed */}
+      </ul>
+    </nav>
   );
-}
+};
+
+export default Navbar;
