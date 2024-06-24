@@ -1,9 +1,8 @@
-import { useState } from "react";
 import "./App.css";
 import HomePage from "./pages/HomePage.jsx";
-import { DashboardLayout, Login, Register } from "./pages";
+import { DashboardLayout, Login, Register, Error, Landing } from "./pages";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Landing } from "./pages";
+
 export const checkDefaultTheme = () => {
   const isDarkTheme = localStorage.getItem("darkTheme") === "true";
   document.body.classList.toggle("dark-theme", isDarkTheme);
@@ -13,6 +12,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
+    errorElement: <Error />,
     children: [
       {
         index: true,

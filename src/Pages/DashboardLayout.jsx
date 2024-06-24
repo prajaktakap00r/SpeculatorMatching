@@ -1,15 +1,5 @@
-import { useState, createContext, useContext, useEffect } from "react";
-import { checkDefaultTheme } from "../App";
-const DashboardContext = createContext();
+import React from "react";
 
 export default function DashboardLayout() {
-  const [isDarkTheme, setIsDarkTheme] = useState(checkDefaultTheme());
-  const toggleDarkTheme = () => {
-    const newDarkTheme = !isDarkTheme;
-    setIsDarkTheme(newDarkTheme);
-    document.body.classList.toggle("dark-theme", newDarkTheme);
-    localStorage.setItem("darkTheme", newDarkTheme);
-  };
-  return <h1>hlo</h1>;
+  return <div>DashboardLayout</div>;
 }
-export const useDashboardContext = () => useContext(DashboardContext);
